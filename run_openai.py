@@ -25,7 +25,7 @@ def edit_distance(s1: str, s2: str) -> int:
 
 
 def solve_file(name, model, temperature, max_tokens, prompt_type):
-    file = f'./stimuli/{prompt_type}/{name}.jsonl'
+    file = f'stimuli/{prompt_type}/{name}.jsonl'
     print(f"Loading {file}")
     if not os.path.exists(file):
         print(f'File {file} does not exist')
@@ -43,9 +43,9 @@ def solve_file(name, model, temperature, max_tokens, prompt_type):
     print(f"Done {name}")
     d = {'prompts': prompts, 'gts': gts, 'res': res, 'accs': accs, 'acc': acc, 'eds': eds, 'ed': ed}
 
-    fo_directory = f'./logs/{prompt_type}'
+    fo_directory = f'logs/{prompt_type}/{model}'
     if not os.path.exists(fo_directory):
-        os.makedirs(fo_directory, exist_ok=False)
+        os.makedirs(fo_directory, exist_ok=True)
     
     output_file = f'{fo_directory}/{name}.json'
     with open(output_file, 'w') as f:

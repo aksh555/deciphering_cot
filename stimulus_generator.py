@@ -1,4 +1,3 @@
-
 import jsonlines
 import os
 import random
@@ -26,7 +25,6 @@ def rot_encode(sequence, n):
             index = char2index[char]
             new_char = index2char[(index+n) % 26]
             new_sequence.append(new_char)
-
     return "".join(new_sequence)
 
 
@@ -218,7 +216,7 @@ def main(args):
         ("examples/bin_5.txt", "bin5")
     ]
     prompt_type = args.prompt_type
-    fo_directory = f"stimuli1/{prompt_type}"
+    fo_directory = f"stimuli/{prompt_type}"
 
     if not os.path.exists(fo_directory):
         os.makedirs(fo_directory, exist_ok=True)
@@ -308,6 +306,6 @@ def main(args):
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
-    args.add_argument("--prompt_type", type=str, help="Prompt type to use [standard, text_cot, math_cot, number_cot]", default="text_cot")
+    args.add_argument("--prompt_type", type=str, help="Prompt type to use", default="text_cot", choices=["standard", "text_cot", "math_cot", "number_cot"])
     args = args.parse_args()
     main(args)
