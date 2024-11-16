@@ -56,13 +56,20 @@ All model generations and outputs are stored in the `logs` directory.
 ## Citation
 If you find this repository helpful, feel free to cite our [publication](https://arxiv.org/abs/2407.01687).
 ```
-@misc{prabhakar2024decipheringfactorsinfluencingefficacy,
-      title={Deciphering the Factors Influencing the Efficacy of Chain-of-Thought: Probability, Memorization, and Noisy Reasoning}, 
-      author={Akshara Prabhakar and Thomas L. Griffiths and R. Thomas McCoy},
-      year={2024},
-      eprint={2407.01687},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2407.01687}, 
+@inproceedings{prabhakar-etal-2024-deciphering,
+    title = "Deciphering the Factors Influencing the Efficacy of Chain-of-Thought: Probability, Memorization, and Noisy Reasoning",
+    author = "Prabhakar, Akshara  and
+      Griffiths, Thomas L.  and
+      McCoy, R. Thomas",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-emnlp.212",
+    pages = "3710--3724"
 }
 ```
